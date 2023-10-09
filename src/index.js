@@ -3,11 +3,11 @@
     Later i can iterate each food card's value by matching the ids
 */
 const foodData = [
-    { id: 0, price: 19.99, food: "Frango Frito" },
+    { id: 0, price: 19.99, food: "Frango Empanado" },
     { id: 1, price: 29.99, food: "Contra-Filé" },
     { id: 2, price: 21.99, food: "Strogonoff" },
     { id: 3, price: 11.99, food: "Porção de Queijo" },
-    { id: 4, price: 5.99, food: "Legumes" },
+    { id: 4, price: 5.99, food: "Salada" },
     { id: 5, price: 9.99, food: "Calabresa" }
 ];
 
