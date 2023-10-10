@@ -211,7 +211,7 @@
     <form class="row g-3 fs-6 text borderteste mb-4">
         <div class="col-sm-10 offset-sm-1 col-lg-6 offset-lg-3">
           <label for="inputName" class="form-label">Nome:</label>
-          <input type="text" class="form-control fs-6 text" id="inputName" placeholder="Nome Completo">
+          <input required type="text" class="form-control fs-6 text" id="inputName" placeholder="Nome Completo">
         </div>
         <div class="col-sm-10 offset-sm-1 col-lg-6 offset-lg-3">
           <label for="inputPhone" class="form-label">Telefone:</label>
@@ -222,11 +222,29 @@
             <input type="email" class="form-control fs-6 text" id="inputEmail" placeholder="ex: nome@email.com">
         </div>
         <div class="d-grid mx-auto col-4">
-            <button class="btn btn-success btn-lg" type="button">Resumo do pedido</button>
+            <!-- Button trigger modal -->
+            <button class="btn btn-success btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" id="calculate_button">
+                Resumo do pedido
+            </button>
         </div>
     </form>
 
-
+    <!-- Modal for the order -->
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger">
+            <h1 class="modal-title fs-5 text-light" id="orderModalLabel">Resumo do seu Pedido</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="client_order">
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
 
 
     <!-- JavaScript for Bootstrap -->

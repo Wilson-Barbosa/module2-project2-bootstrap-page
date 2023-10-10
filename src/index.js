@@ -19,21 +19,21 @@ let formatter = new Intl.NumberFormat('pt-BR',{style: 'currency', currency:'BRL'
 
 function calculate_and_show_order() {
 
-    const clientName = document.getElementById("client-name").value;    //grabbing the client's name
+    const clientName = document.getElementById("inputName").value;      //grabbing the client's name
     const quantities = document.getElementsByName("quantity");          //returns a NodeList (very much like an array) of all quantities
     const orderContainer = document.getElementById("client_order");     //this is the div where the ouput is gonna be placed in
 
     //total Value (starts at 0, of course)
     let totalValue = 0;
 
+    
 
-
-    //This code is so unnecessary convoluted, I'm shocked it even works!
+    //greets the user
     orderContainer.innerHTML = `<p>Olá, <strong>${clientName}</strong>,</p> <br> <p>Este é o seu pedido:</p> <br>`;
 
     for (let element of quantities) {
 
-        //only calculates the price for values above 0
+        //only calculates the price for options above 0
         if (element.value > 0) {
 
             //inserting the quantity of food, it's type and the the sum
@@ -43,8 +43,20 @@ function calculate_and_show_order() {
             totalValue += element.value * foodData[element.id].price;
         }
     }
-    //inserts the order's total value
-    orderContainer.innerHTML += `<br><p>O valor total do seu pedido é de <strong>${formatter.format(totalValue)}</strong></p>`;
+
+
+    //showing a message based on how (if any) items the user picked
+    if(totalValue != 0){
+
+        //if the user chooses at least one option this code is executed
+        orderContainer.innerHTML += `<br><p>O valor total do seu pedido é de <strong>${formatter.format(totalValue)}</strong></p>`;
+
+    } else if (totalValue == 0){
+
+        //if he chooses none this message is printed out and replaces the greeting message
+        orderContainer.innerHTML = `Houve um erro! Por favor, selecione ao menos uma opção!`;
+    }
+
 }
 
 
