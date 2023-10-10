@@ -59,7 +59,7 @@
         <p>Oferecemos diversos pratos e opções para os mais variados gostos e nacionalidades!</p>
     </div>
 
-    <!-- Container made for a red line breaker -->
+    <!-- Red line breaker -->
     <div class="text-danger row mt-3"><hr class="col-8 offset-2 border-2"></div>
     
     <!-- Carousel -->
@@ -95,12 +95,12 @@
     </div>
 
     <!-- Introduction for the menu per se-->
-    <div class="container text-center mt-3">
+    <div class="container text-center mt-5">
         <div class="display-5">Confira o Nosso Menu</div>
         <p>Escolha quantos pratos quiser, basta selecionar a quantidade</p>
     </div>
 
-    <!-- Container made for a red line breaker -->
+    <!-- Red line breaker -->
     <div class="text-danger row mt-3"><hr class="col-8 offset-2 border-2"></div>
 
     <!-- Cards for the Main Course -->
@@ -196,7 +196,38 @@
                 </div>
             </div>
         </div>
-    </div>' '
+    </div>
+
+    <!-- Introduction for the menu per se-->
+    <div class="container text-center mt-5">
+        <div class="display-5">Preencha os campos abaixo</div>
+        <p>Preencha os campos com os seus dados para o seu pedido</p>
+    </div>
+
+    <!-- Red line breaker -->
+    <div class="text-danger row mt-3"><hr class="col-8 offset-2 border-2"></div>
+
+    <!-- Client's Data Form -->
+    <form class="row g-3 fs-6 text borderteste mb-4">
+        <div class="col-sm-10 offset-sm-1 col-lg-6 offset-lg-3">
+          <label for="inputName" class="form-label">Nome:</label>
+          <input type="text" class="form-control fs-6 text" id="inputName" placeholder="Nome Completo">
+        </div>
+        <div class="col-sm-10 offset-sm-1 col-lg-6 offset-lg-3">
+          <label for="inputPhone" class="form-label">Telefone:</label>
+          <input type="tel" class="form-control fs-6 text" id="inputPhone" placeholder="Seu telefone">
+        </div>
+        <div class="col-sm-10 offset-sm-1 col-lg-6 offset-lg-3">
+            <label for="inputEmail" class="form-label">Email:</label>
+            <input type="email" class="form-control fs-6 text" id="inputEmail" placeholder="ex: nome@email.com">
+        </div>
+        <div class="d-grid mx-auto col-4">
+            <button class="btn btn-success btn-lg" type="button">Resumo do pedido</button>
+        </div>
+    </form>
+
+
+
 
     <!-- JavaScript for Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -208,6 +239,11 @@
     <script src="./src/JQuery.js"></script>
     <script src="./src/maskPlugin.js"></script>
     <script src="./src/quantity.js"></script>
+
+    <!--Script that adds a mask to the phone input-->
+    <script>
+        $('#inputPhone').mask('(00) 00000-0000');
+    </script>
 </body>
 
 </html>
