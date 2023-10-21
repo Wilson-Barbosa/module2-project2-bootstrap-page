@@ -6,7 +6,7 @@ Interactive Menu Page made with bootstrap for the BootCamp Dev. Jr, by Abútua T
 ### What can you do
 <p>This a menu page where the user can select up to six different menu options. The quantity allowed ranges from 0 to 99 per option.</p>
 <p>The user can enter their info on a form and a summary of their order is showed within a modal, with the amount select and the order's total value.</p>
-<p>If the user does not choose at least one option from the menu an error message is display when they attempt to place their order.</p>
+<p>If the user does not choose at least one option from the menu an error message is displayed when they attempt to place their order.</p>
 
 <hr>
 
